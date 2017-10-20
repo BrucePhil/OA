@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+		<package name="default" extends="struts-default">
+			<action name="/*action" class="com.direct.action.action" method="{1}">
+					<result name="job" type="redirect">/HT/showjob.jsp</result>
+					<result name="errorjob" type="redirect">/addjob.jsp</result>
+					<result name="updatejobid" type="redirect">/HT/updatejob.jsp</result>
+					<result name="updatejob" type="redirect">/HT/updatejob.jsp</result>
+					
+					
+					<result name="adddep" type="redirect">/HT/showdep.jsp</result>
+					<result name="errordep" type="redirect">/HT/adddep.jsp</result>
+					<result name="querydepid" type="redirect">/HT/updatedep.jsp</result>
+					<result name="updatedep" type="redirect">/HT/updatedep.jsp</result>
+					
+<!--				职位类型	-->
+					<result name="addposit" type="redirect">/HT/showposit.jsp</result>
+					<result name="querpoitid" type="redirect">/HT/updateposit.jsp</result>
+					
+<!--					岗级-->
+					<result name="errorpost" type="redirect">/HT/addpostgrade.jsp</result>
+					<result name="addpost" type="redirect">/HT/showpostgrade.jsp</result>
+					<result name="querpostgradeid" type="redirect">/HT/updatepostgrade.jsp</result>
+			</action>
+		</package>
+	</struts>

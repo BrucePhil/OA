@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!--职务	-->
+	<bean id="job" class="com.direct.entity.Job"></bean>
+<!--连接数据库	-->
+	<bean id="dao" class="com.direct.Dao.DBHelper"></bean>
+<!--部门	-->
+	<bean id="dep" class="com.direct.entity.Department">
+		<property name="userinfos" ref="user"></property>
+	</bean>
+<!--用户表	-->
+	<bean id="user" class="com.direct.entity.Userinfo"></bean>
+<!--职位类型	-->
+	<bean id="posit" class="com.direct.entity.Positiontype"></bean>
+<!--岗级	-->
+	<bean id="post" class="com.direct.entity.Postgrade"></bean>
+</beans>
